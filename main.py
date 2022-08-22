@@ -75,4 +75,6 @@ async def searchPlus(request, SearchText=""):
 #     window.close()
 
 if __name__ == '__main__':
+    print("在 http://localhost:6722 上运行。")
+    print("开源项目：https://github.com/kurisucat/SearchPlus")
     app.run(host='0.0.0.0', port=6722, fast=True, auto_reload=True)
