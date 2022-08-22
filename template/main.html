@@ -117,6 +117,7 @@
                     maxlength="256"
                     placeholder="搜点什么"
                     value="{{Text}}"
+                    onkeydown="if(event.keyCode==13) {Search()}"
                 />
             </div>
             <br />
@@ -131,6 +132,7 @@
                 SearchText = document.getElementById('SearchText').value;
                 Search(SearchText)
             }
+           
         </script>
     </body>
 </html>
