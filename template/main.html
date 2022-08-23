@@ -29,6 +29,7 @@
                 margin-top: -6em;
             }
             #SearchText {
+                position: relative;
                 font-size: 1.5em;
                 outline-style: none;
                 border: 5px solid #363636;
@@ -46,7 +47,10 @@
                 color: #b9b9b9;
                 font-weight: lighter;
             }
-            #SearchText:hover {
+            .JustABoxPreventTwitchingWhenIHoverIt {
+                height: 56px;
+            }
+            .JustABoxPreventTwitchingWhenIHoverIt:hover #SearchText {
                 /*box-shadow: inset 0 3px 0px rgb(0, 0, 0),0 6.5px 0px rgba(0, 0, 0, 0.4);*/
                 box-shadow: inset 0 6px 0px rgb(0, 0, 0),
                     0 13px 0px rgba(0, 0, 0, 0.4);
@@ -70,9 +74,9 @@
                 margin-top: -25px;
                 transition: 0.21s cubic-bezier(0.05, 0, 0, 1);
             }
-            #Search:hover {
+            .JustABoxPreventTwitchingWhenIHoverIt:hover #Search {
                 height: 56px;
-                margin-top: -25px;
+                margin-top: -13px;
                 transition: 0.21s cubic-bezier(0.05, 0, 0, 1);
             }
             #SearchButton {
@@ -109,16 +113,18 @@
     <body>
         <div class="main">
             <h1 class="Heading">SearchPlus</h1>
-            <div id="Search">
-                <input
-                    type="text"
-                    id="SearchText"
-                    minlength="1"
-                    maxlength="256"
-                    placeholder="搜点什么"
-                    value="{{Text}}"
-                    onkeydown="if(event.keyCode==13) {Search()}"
-                />
+            <div class="JustABoxPreventTwitchingWhenIHoverIt">
+                <div id="Search">
+                    <input
+                        type="text"
+                        id="SearchText"
+                        minlength="1"
+                        maxlength="256"
+                        placeholder="搜点什么"
+                        value="{{Text}}"
+                        onkeydown="if(event.keyCode==13) {Search()}"
+                    />
+                </div>
             </div>
             <br />
             <div id="SearchButtonDiv">
