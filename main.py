@@ -28,7 +28,7 @@ async def searchPlus(request, SearchText=""):
                 "ping -n 1 -w 200 google.com")
         else:
             checker, return_data = subprocess.getstatusoutput(
-                "ping -W 200 google.com")
+                "ping -c 1 -W 1 google.com")
         if checker == 0:
             return True
         else:
